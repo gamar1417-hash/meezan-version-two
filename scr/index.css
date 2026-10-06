@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Reem+Kufi:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 42 38% 98%;
+    --foreground: 155 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 155 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 30% 12%;
+    --primary: 152 42% 22%;
+    --primary-foreground: 42 45% 96%;
+    --secondary: 140 18% 90%;
+    --secondary-foreground: 155 30% 15%;
+    --muted: 42 25% 94%;
+    --muted-foreground: 155 12% 42%;
+    --accent: 42 78% 48%;
+    --accent-foreground: 155 40% 12%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 42 22% 88%;
+    --input: 42 22% 88%;
+    --ring: 152 42% 22%;
+    --chart-1: 152 42% 28%;
+    --chart-2: 42 78% 50%;
+    --chart-3: 160 35% 40%;
+    --chart-4: 35 65% 58%;
+    --chart-5: 170 40% 35%;
+    --radius: 1rem;
+    --font-heading: "Reem Kufi", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Tajawal", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Amiri", "Reem Kufi", serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 42 30% 97%;
+    --sidebar-foreground: 155 30% 18%;
+    --sidebar-primary: 152 42% 22%;
+    --sidebar-primary-foreground: 42 45% 96%;
+    --sidebar-accent: 140 18% 90%;
+    --sidebar-accent-foreground: 155 30% 15%;
+    --sidebar-border: 42 22% 88%;
+    --sidebar-ring: 152 42% 22%;
+  }
+
+  .dark {
+    --background: 155 38% 7%;
+    --foreground: 42 40% 95%;
+    --card: 155 33% 10%;
+    --card-foreground: 42 40% 95%;
+    --popover: 155 33% 10%;
+    --popover-foreground: 42 40% 95%;
+    --primary: 42 78% 50%;
+    --primary-foreground: 155 40% 8%;
+    --secondary: 150 25% 16%;
+    --secondary-foreground: 42 40% 92%;
+    --muted: 150 22% 14%;
+    --muted-foreground: 42 20% 68%;
+    --accent: 150 30% 65%;
+    --accent-foreground: 155 40% 8%;
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 42 78% 50%;
+    --chart-1: 42 78% 55%;
+    --chart-2: 150 35% 55%;
+    --chart-3: 35 70% 60%;
+    --chart-4: 160 30% 50%;
+    --chart-5: 170 35% 45%;
+    --sidebar-background: 155 38% 9%;
+    --sidebar-foreground: 42 40% 92%;
+    --sidebar-primary: 42 78% 50%;
+    --sidebar-primary-foreground: 155 40% 8%;
+    --sidebar-accent: 150 22% 16%;
+    --sidebar-accent-foreground: 42 40% 92%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 42 78% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-text {
+    background: linear-gradient(135deg, hsl(42 85% 55%), hsl(38 70% 42%), hsl(45 80% 58%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .arabesque-pattern {
+    background-image: radial-gradient(circle at 50% 50%, hsl(152 42% 22% / 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
